@@ -1,0 +1,63 @@
+### Recuperar los perros
+GET http://localhost:3000/api/perros
+
+### Recuperar un perro por nombre
+
+GET http://localhost:3000/api/perros/Max
+
+### Crear un perro
+
+POST http://localhost:3000/api/perros
+
+### Crear un perro
+
+POST http://localhost:3000/api/perros
+Content-Type: application/json
+
+{
+    "nombre": "Maximun",
+    "raza": "Pastor Aleman",
+    "peso": 20,
+    "fecha_nacimiento": "2019-10-25",
+    "vacunado": 1,
+    "dueno_id": 1
+}
+
+### Eliminar un perro
+
+DELETE http://localhost:3000/api/perros/Maximun
+
+
+### Actualizar un perro
+PUT http://localhost:3000/api/perros/9
+Content-Type: application/json
+
+{
+    "id": 9,
+    "nombre": "morcillaaaa",
+    "raza": "Pastor Aleman",
+    "peso": 20,
+    "fecha_nacimiento": "2019-10-25",
+    "vacunado": 1,
+    "id_dueno": 1
+}
+
+### Actualizar un perro
+PUT http://localhost:3000/api/perros/1
+Content-Type: application/json
+
+{
+    "id": 99,
+    "nombre": "morcilla",
+    "raza": "Pastor Aleman",
+    "peso": 20,
+    "fecha_nacimiento": "2019-10-25",
+    "vacunado": 1,
+    "id_dueno": 1
+}
+
+### Recuperar las razas de los perros
+
+GET http://localhost:3000/api/perros/grafica
+
+

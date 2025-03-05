@@ -1,0 +1,47 @@
+### Recuperar un plato por idplato
+GET http://localhost:3000/api/platos/36
+
+###
+
+GET http://localhost:3000/api/platos
+
+###
+
+POST http://localhost:3000/api/platos
+Content-Type: application/json
+
+{
+    "nombre": "tostada",
+    "precio": 1.5,
+    "descripcion": "pan tostado con aceite de oliva"
+}
+
+###
+# Borrado de un plato que no existe (404)
+DELETE http://localhost:3000/api/platos/99
+
+###
+# Borrado de un plato que existe (204)
+DELETE http://localhost:3000/api/platos/34
+
+### Actualizacion de un plato
+PUT  http://localhost:3000/api/platos/45
+Content-Type: application/json
+
+{
+    "idplato": 45,
+    "nombre": "PAPAS ALIÑÁS",
+    "precio": 3,
+    "descripcion": "Patatas cultivadas en terrenos arenosos de Sanlúcar de Barrameda, cocidas y aliñadas con aceite de oliva virgen extra de Andalucía."
+}
+
+### Actualizacion de un plato BAD REQUEST
+PUT  http://localhost:3000/api/platos/82
+Content-Type: application/json
+
+{
+    "idplato": 45,
+    "nombre": "PAPAS ALIÑÁS",
+    "precio": 4,
+    "descripcion": "Patatas cultivadas en terrenos arenosos de Sanlúcar de Barrameda, cocidas y aliñadas con aceite de oliva virgen extra de Andalucía."
+}

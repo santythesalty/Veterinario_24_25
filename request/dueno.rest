@@ -1,0 +1,50 @@
+### Recuperar los duenos
+GET http://localhost:3000/api/duenos
+
+### Recuperar un dueno por id Dueno
+GET http://localhost:3000/api/duenos/9
+
+
+### Recuperar Duenos con perros sin vacunar
+
+GET http://localhost:3000/api/duenos/activosSinVacunar
+
+### Enviar Correo
+
+POST http://localhost:3000/api/duenos/enviarCorreo
+Content-Type: application/json
+
+{
+    "correo": "supermage8848@proton.me",
+    "nombrePerro": "Willy"
+}
+
+
+### Crear un dueno
+POST http://localhost:3000/api/duenos
+Content-Type: application/json
+
+{
+    "nombre": "Caprichito",
+    "email": "capricho@example.com",
+    "fecha_nacimiento": "1990-10-25",
+    "es_activo": 1
+}
+
+### Eliminar un dueno
+DELETE http://localhost:3000/api/duenos/7
+
+### Buscar dueno por pk
+GET http://localhost:3000/api/duenos/buscarDueno/1
+
+### Actualizar un dueno
+PUT http://localhost:3000/api/duenos/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "Caprichito",
+    "email": "hola@hola.com",
+    "fecha_nacimiento": "1990-10-25",
+    "es_activo": 1
+}
